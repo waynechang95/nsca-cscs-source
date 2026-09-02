@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSCA-CSCS Review | Week 2: 生理機制與能量系統訓練</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="index_zh.html" class="brand-badge" style="text-decoration: none;">← 主選單</a>
+      <div class="presentation-title">Week 2: 生理機制與能量系統訓練</div>
+    </div>
+    <div class="header-controls">
+      <button class="btn-icon" id="btn-ai-chat" title="AI Assistant (Press 'A')">🤖</button>
+      <button class="btn-icon" id="btn-notes" title="Slide Notes (Press 'N')">📝</button>
+      <a href="week2_en.html" class="btn-icon" style="width: auto; padding: 0 10px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan);">
+        EN / 中文
+      </a>
+      <button class="btn-icon" id="btn-overview" title="Slide Overview">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      </button>
+      <button class="btn-icon" id="btn-fullscreen" title="Toggle Fullscreen">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </header>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <main>
+    <div class="slide-deck">
+      <!-- SLIDE 1: Title -->
+      <section class="slide active title-slide">
+        <div class="chapter-tag">第二週 • 第 3 章 & 第 4 章</div>
+        <h1>生理機制與能量系統訓練</h1>
+        <p class="subtitle">磷酸原系統、糖解作用、有氧氧化系統、乳酸閾值、EPOC 及內分泌機制（睪固酮、生長激素、IGF-1、皮質醇、兒茶酚胺）。</p>
+        <div class="title-meta">
+          <span class="badge">📖 第 3 章：阻力運動與訓練的能量學 & 第 4 章：阻力運動的內分泌反應</span>
+          <span class="badge">🏋️ NSCA-CSCS High-Yield</span>
+          <span class="badge">🎯 Core Foundations</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Breakdown -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">課程大綱</div>
+          <h2 class="slide-title">Week 2 Curriculum Breakdown</h2>
+          <p class="slide-subtitle">本單元核心涵蓋主題與解剖/生理/計畫設計觀念。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">01</div>
+                <div class="card-title">第 3 章：阻力運動與訓練的能量學</div>
+              </div>
+              <ul class="feature-list">
+                <li>磷酸原系統 (ATP-PCr)：短時間爆發力（<10秒），肌酸激酶（Creatine Kinase）催化反應。</li><li>糖解作用 (Glycolytic System)：快速與慢速糖解、丙酮酸轉乳酸 vs 乙醯輔酶A、淨產 2-3 ATP。</li><li>氧化系統 (Oxidative System)：克氏循環與電子傳遞鏈（ETC）、脂肪與蛋白質氧化發電。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">02</div>
+                <div class="card-title">第 4 章：阻力運動的內分泌反應</div>
+              </div>
+              <ul class="feature-list">
+                <li>基質耗竭與補充：肌醣原再補充速率與運動後過量氧耗（EPOC）動態適應。</li><li>內分泌基本原理：同化作用 vs 異化作用激素、受體結合與上調（Upregulation）機制。</li><li>主要同化激素：睾固酮（大重量刺激脈衝）、生長激素（GH多種異構體）、IGF-1 類胰島素生長因子。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: Key Concept 1 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第二週 • 第 3 章 & 第 4 章</div>
+          <h2 class="slide-title">核心原理與高頻考點 (PART 1)</h2>
+          <p class="slide-subtitle">深入探討本章節最常考的理論基礎與數據適應。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">關鍵概念 1</div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 8px;">磷酸原系統 (ATP-PCr)：短時間爆發力（<10秒），肌酸激酶（Creatine Kinase）催化反應。</p>
+              <div class="highlight-box emerald" style="margin-top: 16px;">
+                糖解作用 (Glycolytic System)：快速與慢速糖解、丙酮酸轉乳酸 vs 乙醯輔酶A、淨產 2-3 ATP。
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">關鍵概念 2</div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 8px;">氧化系統 (Oxidative System)：克氏循環與電子傳遞鏈（ETC）、脂肪與蛋白質氧化發電。</p>
+              <div class="highlight-box amber" style="margin-top: 16px;">
+                基質耗竭與補充：肌醣原再補充速率與運動後過量氧耗（EPOC）動態適應。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Formula & Deep Dive -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第二週 • 第 3 章 & 第 4 章</div>
+          <h2 class="slide-title">重要物理/生理公式與模型</h2>
+          <p class="slide-subtitle">證照考試中需精通的計算公式與定量分析。</p>
+        </div>
+        <div class="slide-body">
+          <div class="card">
+            <div class="card-title">定量公式 (Quantitative Relationship)</div>
+            <div class="formula-box">
+              \[ \text{ATP} + \text{H}_2\text{O} \xrightarrow{\text{ATPase}} \text{ADP} + \text{P}_i + \text{H}^+ + \text{Energy} \]
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 16px;">
+            <div class="card">
+              <div class="card-title">應用說明 (Part A)</div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary);">內分泌基本原理：同化作用 vs 異化作用激素、受體結合與上調（Upregulation）機制。</p>
+            </div>
+            <div class="card">
+              <div class="card-title">應用說明 (Part B)</div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary);">主要同化激素：睾固酮（大重量刺激脈衝）、生長激素（GH多種異構體）、IGF-1 類胰島素生長因子。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Practice Question -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">模擬試題</div>
+          <h2 class="slide-title">NSCA-CSCS 模擬考題</h2>
+          <p class="slide-subtitle">檢驗本章節的核心概念與解題能力。</p>
+        </div>
+        <div class="slide-body">
+          <div class="question-card">
+            <div class="question-text">下列哪一種能量系統具有最高的 ATP 生產速率，但總容量最有限？</div>
+            <div class="options-list">
+              <div class="option-item">A) 快速糖解作用</div><div class="option-item">B) 磷酸原系統 (ATP-PCr)</div><div class="option-item">C) 慢速糖解作用</div><div class="option-item">D) 脂肪氧化作用</div>
+            </div>
+            <button class="reveal-btn">顯示答案與解析</button>
+            <div class="answer-box">
+              <strong>正確答案: B (磷酸原系統)</strong><br>
+              <em>解析:</em> 磷酸原系統能以最快速率再合成 ATP，但其儲存容量極小，僅能維持約 5–10 秒的最大全力運動。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Summary -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">本週總結</div>
+          <h2 class="slide-title">Week 2 核心精華複習清單</h2>
+          <p class="slide-subtitle">進入下一週課程前請確認完全掌握以下觀念。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-cyan);">第 3 章：阻力運動與訓練的能量學</div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li>✔ 磷酸原系統 (ATP-PCr)：短時間爆發力（<10秒），肌酸激酶（Creatine Kinase）催化反應。</li><li>✔ 糖解作用 (Glycolytic System)：快速與慢速糖解、丙酮酸轉乳酸 vs 乙醯輔酶A、淨產 2-3 ATP。</li><li>✔ 氧化系統 (Oxidative System)：克氏循環與電子傳遞鏈（ETC）、脂肪與蛋白質氧化發電。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-emerald);">第 4 章：阻力運動的內分泌反應</div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li>✔ 基質耗竭與補充：肌醣原再補充速率與運動後過量氧耗（EPOC）動態適應。</li><li>✔ 內分泌基本原理：同化作用 vs 異化作用激素、受體結合與上調（Upregulation）機制。</li><li>✔ 主要同化激素：睾固酮（大重量刺激脈衝）、生長激素（GH多種異構體）、IGF-1 類胰島素生長因子。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="nav-controls">
+      <button class="btn-nav" id="btn-prev">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+        上一頁
+      </button>
+      <button class="btn-nav" id="btn-next">
+        下一頁
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"></path></svg>
+      </button>
+    </div>
+    <div class="slide-counter">
+      投影片 <span id="current-slide">1</span> / <span id="total-slides">6</span>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-overview">
+    <div class="modal-header">
+      <div class="modal-title">投影片總覽</div>
+      <button class="btn-icon" id="btn-close-modal">✕</button>
+    </div>
+    <div class="overview-grid" id="overview-grid"></div>
+  </div>
+
+  
+  <!-- 隨頁筆記抽屜 -->
+  <div class="note-drawer" id="note-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        📝 隨頁筆記本
+        <span class="slide-tag-badge" id="current-slide-badge">筆記</span>
+      </div>
+      <button class="btn-icon" id="btn-close-drawer">✕</button>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-drawer-action" id="btn-quick-clip">📌 一鍵引用重點</button>
+      <button class="btn-drawer-action" id="btn-master-notebook">📖 檢視所有筆記</button>
+    </div>
+    <textarea class="note-textarea" id="note-textarea" placeholder="在此記錄本張投影片的個人筆記與心得...（按 'N' 鍵可隨時開啟/關閉）"></textarea>
+    <div class="drawer-footer">
+      <div class="save-status">
+        <div class="save-dot"></div>
+        <span id="save-status-text">已自動儲存</span>
+      </div>
+      <span>按 'N' 鍵開關筆記</span>
+    </div>
+  </div>
+
+  <!-- 全域筆記總覽 Modal -->
+  <div class="modal-overlay" id="modal-notebook">
+    <div class="modal-header">
+      <div class="modal-title">📖 全域學習筆記本 (所有已存筆記)</div>
+      <button class="btn-icon" id="btn-close-notebook-modal">✕</button>
+    </div>
+    <div class="notebook-modal-body">
+      <div class="notebook-toolbar">
+        <input type="text" class="notebook-search" id="notebook-search" placeholder="搜尋所有已記錄的學習筆記與重點...">
+        <button class="btn-nav" id="btn-export-notes">匯出 MD 📝</button>
+        <button class="btn-nav" id="btn-export-json">匯出 JSON 💾</button>
+        <button class="btn-nav" id="btn-import-notes">匯入 JSON 📤</button>
+        <input type="file" id="file-import-notes" accept=".json" style="display: none;">
+      </div>
+      <div class="notebook-list" id="master-notebook-list"></div>
+    </div>
+  </div>
+  <!-- RAG AI 隨身助教抽屜 -->
+  <div class="ai-chat-drawer" id="ai-chat-drawer">
+    <div class="ai-chat-header">
+      <div class="ai-chat-title">
+        🤖 NSCA 隨身 AI 助教
+        <span class="ai-badge-pill" id="ai-slide-context-badge">已連結投影片</span>
+      </div>
+      <button class="btn-icon" id="btn-close-ai-drawer">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-bubble ai">
+        您好！我是您的 NSCA-CSCS 考照隨身 AI 助教。隨時向我提問關於本頁投影片或 1,876 頁原書課本的疑問！
+      </div>
+    </div>
+    <div class="quick-pills">
+      <button class="quick-pill-btn" data-prompt="請詳細解釋本頁投影片的核心觀念與考點">💡 解釋觀念</button>
+      <button class="quick-pill-btn" data-prompt="請出 2 題關於此主題的 CSCS 模擬考題與解析">🎯 考題出題</button>
+      <button class="quick-pill-btn" data-prompt="本主題在 CSCS 考試中最常考的高頻重點有哪些？">⭐ 必考重點</button>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chat-input" placeholder="向 AI 助教提問...（按 'A' 鍵開關）">
+      <button class="btn-send-chat" id="btn-send-chat">傳送</button>
+    </div>
+  </div>
+  <script src="slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSCA-CSCS Review | Week 9: 增強式與速度敏捷訓練</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="index_zh.html" class="brand-badge" style="text-decoration: none;">← 主選單</a>
+      <div class="presentation-title">Week 9: 增強式與速度敏捷訓練</div>
+    </div>
+    <div class="header-controls">
+      <button class="btn-icon" id="btn-ai-chat" title="AI Assistant (Press 'A')">🤖</button>
+      <button class="btn-icon" id="btn-notes" title="Slide Notes (Press 'N')">📝</button>
+      <a href="week9_en.html" class="btn-icon" style="width: auto; padding: 0 10px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan);">
+        EN / 中文
+      </a>
+      <button class="btn-icon" id="btn-overview" title="Slide Overview">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      </button>
+      <button class="btn-icon" id="btn-fullscreen" title="Toggle Fullscreen">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </header>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <main>
+    <div class="slide-deck">
+      <!-- SLIDE 1: Title -->
+      <section class="slide active title-slide">
+        <div class="chapter-tag">第九週 • 第 18 章 & 第 19 章</div>
+        <h1>增強式與速度敏捷訓練</h1>
+        <p class="subtitle">伸展-收縮循環（SSC）機制、增強式訓練量與安全規範、衝刺階段解析（加速段 vs 最大速度段）與變向敏捷（COD）訓練。</p>
+        <div class="title-meta">
+          <span class="badge">📖 第 18 章：增強式訓練設計 & 第 19 章：速度與敏捷性設計</span>
+          <span class="badge">🏋️ NSCA-CSCS High-Yield</span>
+          <span class="badge">🎯 Core Foundations</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Breakdown -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">課程大綱</div>
+          <h2 class="slide-title">Week 9 Curriculum Breakdown</h2>
+          <p class="slide-subtitle">本單元核心涵蓋主題與解剖/生理/計畫設計觀念。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">01</div>
+                <div class="card-title">第 18 章：增強式訓練設計</div>
+              </div>
+              <ul class="feature-list">
+                <li>SSC 伸展-收縮循環三階段：Phase I 離心階段（伸展/彈性位能儲存）$
+ightarrow$ Phase II 攤還期/轉折期 (Amortization - 轉折時間越短越好) $
+ightarrow$ Phase III 向心階段（爆炸力釋放）。</li><li>增強式訓練安全：深蹲 1.5 倍體重門檻（傳統建議）、落地機制（雙膝不可內翻）、場地硬度與鞋類選擇。</li><li>增強式訓練量（足點地次數 Contacts）：初學者（80–100 次/堂）、中階者（100–120 次/堂）、高階者（120–140 次/堂）。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">02</div>
+                <div class="card-title">第 19 章：速度與敏捷性設計</div>
+              </div>
+              <ul class="feature-list">
+                <li>衝刺跑步力學：衝量（Impulse $F \cdot \Delta t$）、發力速率（RFD）、觸地時間（最大速度段小於 0.1 秒）。</li><li>衝刺階段解析：加速段（前傾軀幹、步幅漸大、地面施力時間較長）vs 最大速度段（軀幹直立、高步頻、極短觸地時間）。</li><li>敏捷 (Agility) vs 變向 (COD)：變向能力（預先設定好的移動路徑）vs 敏捷性（變向能力 + 感知-認知決策反應能力）。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: Key Concept 1 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第九週 • 第 18 章 & 第 19 章</div>
+          <h2 class="slide-title">核心原理與高頻考點 (PART 1)</h2>
+          <p class="slide-subtitle">深入探討本章節最常考的理論基礎與數據適應。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">關鍵概念 1</div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 8px;">SSC 伸展-收縮循環三階段：Phase I 離心階段（伸展/彈性位能儲存）$
+ightarrow$ Phase II 攤還期/轉折期 (Amortization - 轉折時間越短越好) $
+ightarrow$ Phase III 向心階段（爆炸力釋放）。</p>
+              <div class="highlight-box emerald" style="margin-top: 16px;">
+                增強式訓練安全：深蹲 1.5 倍體重門檻（傳統建議）、落地機制（雙膝不可內翻）、場地硬度與鞋類選擇。
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">關鍵概念 2</div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 8px;">增強式訓練量（足點地次數 Contacts）：初學者（80–100 次/堂）、中階者（100–120 次/堂）、高階者（120–140 次/堂）。</p>
+              <div class="highlight-box amber" style="margin-top: 16px;">
+                衝刺跑步力學：衝量（Impulse $F \cdot \Delta t$）、發力速率（RFD）、觸地時間（最大速度段小於 0.1 秒）。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Formula & Deep Dive -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第九週 • 第 18 章 & 第 19 章</div>
+          <h2 class="slide-title">重要物理/生理公式與模型</h2>
+          <p class="slide-subtitle">證照考試中需精通的計算公式與定量分析。</p>
+        </div>
+        <div class="slide-body">
+          <div class="card">
+            <div class="card-title">定量公式 (Quantitative Relationship)</div>
+            <div class="formula-box">
+              \[ \text{Impulse} = \text{Force} \times \Delta t = \Delta \text{Momentum} \]
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 16px;">
+            <div class="card">
+              <div class="card-title">應用說明 (Part A)</div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary);">衝刺階段解析：加速段（前傾軀幹、步幅漸大、地面施力時間較長）vs 最大速度段（軀幹直立、高步頻、極短觸地時間）。</p>
+            </div>
+            <div class="card">
+              <div class="card-title">應用說明 (Part B)</div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary);">敏捷 (Agility) vs 變向 (COD)：變向能力（預先設定好的移動路徑）vs 敏捷性（變向能力 + 感知-認知決策反應能力）。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Practice Question -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">模擬試題</div>
+          <h2 class="slide-title">NSCA-CSCS 模擬考題</h2>
+          <p class="slide-subtitle">檢驗本章節的核心概念與解題能力。</p>
+        </div>
+        <div class="slide-body">
+          <div class="question-card">
+            <div class="question-text">决定增強式訓練中「伸展-收縮循環 (SSC)」爆發力輸出效率的最關鍵因素為：</div>
+            <div class="options-list">
+              <div class="option-item">A) 負載重量的大小</div><div class="option-item">B) 攤還期 (Amortization Phase) 的時間長短（必須越短越好）</div><div class="option-item">C) 下蹲動作的深度</div><div class="option-item">D) 組間休息時間</div>
+            </div>
+            <button class="reveal-btn">顯示答案與解析</button>
+            <div class="answer-box">
+              <strong>正確答案: B (攤還期時間極短)</strong><br>
+              <em>解析:</em> 攤還期（離心伸展轉換至向心收縮之間的轉折期）必須越短越好；若轉折時間過長，肌腱儲存的彈性位能將會以熱能形式消散。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Summary -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">本週總結</div>
+          <h2 class="slide-title">Week 9 核心精華複習清單</h2>
+          <p class="slide-subtitle">進入下一週課程前請確認完全掌握以下觀念。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-cyan);">第 18 章：增強式訓練設計</div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li>✔ SSC 伸展-收縮循環三階段：Phase I 離心階段（伸展/彈性位能儲存）$
+ightarrow$ Phase II 攤還期/轉折期 (Amortization - 轉折時間越短越好) $
+ightarrow$ Phase III 向心階段（爆炸力釋放）。</li><li>✔ 增強式訓練安全：深蹲 1.5 倍體重門檻（傳統建議）、落地機制（雙膝不可內翻）、場地硬度與鞋類選擇。</li><li>✔ 增強式訓練量（足點地次數 Contacts）：初學者（80–100 次/堂）、中階者（100–120 次/堂）、高階者（120–140 次/堂）。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-emerald);">第 19 章：速度與敏捷性設計</div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li>✔ 衝刺跑步力學：衝量（Impulse $F \cdot \Delta t$）、發力速率（RFD）、觸地時間（最大速度段小於 0.1 秒）。</li><li>✔ 衝刺階段解析：加速段（前傾軀幹、步幅漸大、地面施力時間較長）vs 最大速度段（軀幹直立、高步頻、極短觸地時間）。</li><li>✔ 敏捷 (Agility) vs 變向 (COD)：變向能力（預先設定好的移動路徑）vs 敏捷性（變向能力 + 感知-認知決策反應能力）。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="nav-controls">
+      <button class="btn-nav" id="btn-prev">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+        上一頁
+      </button>
+      <button class="btn-nav" id="btn-next">
+        下一頁
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"></path></svg>
+      </button>
+    </div>
+    <div class="slide-counter">
+      投影片 <span id="current-slide">1</span> / <span id="total-slides">6</span>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-overview">
+    <div class="modal-header">
+      <div class="modal-title">投影片總覽</div>
+      <button class="btn-icon" id="btn-close-modal">✕</button>
+    </div>
+    <div class="overview-grid" id="overview-grid"></div>
+  </div>
+
+  
+  <!-- 隨頁筆記抽屜 -->
+  <div class="note-drawer" id="note-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        📝 隨頁筆記本
+        <span class="slide-tag-badge" id="current-slide-badge">筆記</span>
+      </div>
+      <button class="btn-icon" id="btn-close-drawer">✕</button>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-drawer-action" id="btn-quick-clip">📌 一鍵引用重點</button>
+      <button class="btn-drawer-action" id="btn-master-notebook">📖 檢視所有筆記</button>
+    </div>
+    <textarea class="note-textarea" id="note-textarea" placeholder="在此記錄本張投影片的個人筆記與心得...（按 'N' 鍵可隨時開啟/關閉）"></textarea>
+    <div class="drawer-footer">
+      <div class="save-status">
+        <div class="save-dot"></div>
+        <span id="save-status-text">已自動儲存</span>
+      </div>
+      <span>按 'N' 鍵開關筆記</span>
+    </div>
+  </div>
+
+  <!-- 全域筆記總覽 Modal -->
+  <div class="modal-overlay" id="modal-notebook">
+    <div class="modal-header">
+      <div class="modal-title">📖 全域學習筆記本 (所有已存筆記)</div>
+      <button class="btn-icon" id="btn-close-notebook-modal">✕</button>
+    </div>
+    <div class="notebook-modal-body">
+      <div class="notebook-toolbar">
+        <input type="text" class="notebook-search" id="notebook-search" placeholder="搜尋所有已記錄的學習筆記與重點...">
+        <button class="btn-nav" id="btn-export-notes">匯出 MD 📝</button>
+        <button class="btn-nav" id="btn-export-json">匯出 JSON 💾</button>
+        <button class="btn-nav" id="btn-import-notes">匯入 JSON 📤</button>
+        <input type="file" id="file-import-notes" accept=".json" style="display: none;">
+      </div>
+      <div class="notebook-list" id="master-notebook-list"></div>
+    </div>
+  </div>
+  <!-- RAG AI 隨身助教抽屜 -->
+  <div class="ai-chat-drawer" id="ai-chat-drawer">
+    <div class="ai-chat-header">
+      <div class="ai-chat-title">
+        🤖 NSCA 隨身 AI 助教
+        <span class="ai-badge-pill" id="ai-slide-context-badge">已連結投影片</span>
+      </div>
+      <button class="btn-icon" id="btn-close-ai-drawer">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-bubble ai">
+        您好！我是您的 NSCA-CSCS 考照隨身 AI 助教。隨時向我提問關於本頁投影片或 1,876 頁原書課本的疑問！
+      </div>
+    </div>
+    <div class="quick-pills">
+      <button class="quick-pill-btn" data-prompt="請詳細解釋本頁投影片的核心觀念與考點">💡 解釋觀念</button>
+      <button class="quick-pill-btn" data-prompt="請出 2 題關於此主題的 CSCS 模擬考題與解析">🎯 考題出題</button>
+      <button class="quick-pill-btn" data-prompt="本主題在 CSCS 考試中最常考的高頻重點有哪些？">⭐ 必考重點</button>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chat-input" placeholder="向 AI 助教提問...（按 'A' 鍵開關）">
+      <button class="btn-send-chat" id="btn-send-chat">傳送</button>
+    </div>
+  </div>
+  <script src="slides.js"></script>
+</body>
+</html>

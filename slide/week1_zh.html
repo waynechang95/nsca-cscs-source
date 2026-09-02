@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSCA-CSCS 證照複習 | 第一週：運動解剖學與生物力學</title>
+  <meta name="description" content="NSCA-CSCS 證照考試第一週複習投影片（繁體中文版）：第 1 章（身體系統）與第 2 章（阻力運動生物力學）。">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="index_zh.html" class="brand-badge" style="text-decoration: none;">← 主選單</a>
+      <div class="presentation-title">第一週：運動解剖學與生物力學</div>
+    </div>
+    <div class="header-controls">
+      <button class="btn-icon" id="btn-ai-chat" title="AI Assistant (Press 'A')">🤖</button>
+      <button class="btn-icon" id="btn-notes" title="Slide Notes (Press 'N')">📝</button>
+      <a href="week1_en.html" class="btn-icon" title="Switch to English" style="width: auto; padding: 0 10px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan);">
+        EN / 中文
+      </a>
+      <button class="btn-icon" id="btn-overview" title="投影片總覽 (按 'O')">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      </button>
+      <button class="btn-icon" id="btn-fullscreen" title="全螢幕模式 (按 'F')">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </header>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <main>
+    <div class="slide-deck">
+      <!-- SLIDE 1: 標題頁 -->
+      <section class="slide active title-slide">
+        <div class="chapter-tag">NSCA-CSCS 證照複習課程 • 第一週</div>
+        <h1>運動解剖學與生物力學</h1>
+        <p class="subtitle">涵蓋《NSCA 體能訓練精要 (Essentials of Strength Training and Conditioning, 5th Ed)》第 1 章（身體系統的構造與功能）與第 2 章（阻力運動生物力學）高頻考點</p>
+        <div class="title-meta">
+          <span class="badge">📖 第 1 & 2 章重點</span>
+          <span class="badge">🏋️ 考前高頻精華</span>
+          <span class="badge">🎯 運動科學基礎</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: 課程大綱 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">課程總覽</div>
+          <h2 class="slide-title">第一週 複習進度大綱</h2>
+          <p class="slide-subtitle">建立骨骼肌肉系統、神經肌肉控制、心血管呼吸系統與生物力學槓桿基礎。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">01</div>
+                <div class="card-title">第 1 章：身體系統的構造與功能</div>
+              </div>
+              <ul class="feature-list">
+                <li><strong>骨骼肌肉解剖：</strong> 骨骼結構、關節分類與肌小節（Sarcomere）組織。</li>
+                <li><strong>肌絲滑行理論：</strong> 橫橋週期（Cross-bridge cycling）與激發-收縮偶聯。</li>
+                <li><strong>神經肌肉控制：</strong> 肌纖維類型（Type I / IIa / IIx）與馬達單元徵召。</li>
+                <li><strong>心血管與呼吸系統：</strong> 心臟傳導系統、血流動力學與氣體交換機制。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">02</div>
+                <div class="card-title">第 2 章：阻力運動生物力學</div>
+              </div>
+              <ul class="feature-list">
+                <li><strong>人體槓桿系統：</strong> 一級、二級與三級槓桿原理及機械利得（$MA$）。</li>
+                <li><strong>解剖平面與動作：</strong> 矢狀面、冠狀面、水平面與關節運動軸。</li>
+                <li><strong>肌力與功率學：</strong> 轉矩（Torque）、力量-速度與長度-張力關係。</li>
+                <li><strong>阻力來源與關節防護：</strong> 重力、慣性、流體阻力與腰椎、膝關節安全。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: 骨骼系統與關節分類 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 骨骼肌肉系統</div>
+          <h2 class="slide-title">骨骼系統與關節結構分類</h2>
+          <p class="slide-subtitle">人體關節構造類型及其運動自由度（Degrees of Freedom）。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-title">纖維關節 (Fibrous)</div>
+              <p style="color: var(--text-secondary); margin-top: 8px; font-size: 0.9rem;"><strong>不可動</strong>。骨骼間由緻密纖維結締組織連接。</p>
+              <div class="highlight-box" style="margin-top: 12px;">
+                <em>範例：</em> 頭顱骨縫（Skull sutures）。
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">軟骨關節 (Cartilaginous)</div>
+              <p style="color: var(--text-secondary); margin-top: 8px; font-size: 0.9rem;"><strong>微動</strong>。由纖維軟骨盤分隔與緩衝。</p>
+              <div class="highlight-box emerald" style="margin-top: 12px;">
+                <em>範例：</em> 椎間盤（Intervertebral discs）、恥骨聯合。
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">滑液關節 (Synovial)</div>
+              <p style="color: var(--text-secondary); margin-top: 8px; font-size: 0.9rem;"><strong>大幅度可動</strong>。具備關節軟骨與滑液囊。</p>
+              <div class="highlight-box amber" style="margin-top: 12px;">
+                <em>範例：</em> 肘關節、膝關節、髖關節、肩關節。
+              </div>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 16px;">
+            <div class="card-title">滑液關節之運動軸（自由度）分類</div>
+            <div class="grid-3" style="margin-top: 12px;">
+              <div>
+                <strong style="color: var(--accent-cyan);">單軸關節 (Uniaxial):</strong> 繞單一軸旋轉（絞鍊關節）。<br>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">例如：肘關節（屈曲/伸展）</span>
+              </div>
+              <div>
+                <strong style="color: var(--accent-emerald);">雙軸關節 (Biaxial):</strong> 繞兩個互相垂直的軸運動。<br>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">例如：腕關節、踝關節</span>
+              </div>
+              <div>
+                <strong style="color: var(--accent-amber);">多軸關節 (Multiaxial):</strong> 球窩關節，可在三維空間運動。<br>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">例如：肩關節、髖關節</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: 骨骼肌組織結構 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 骨骼肌肉系統</div>
+          <h2 class="slide-title">骨骼肌微觀解剖結構</h2>
+          <p class="slide-subtitle">從肌外膜到肌小節（Sarcomere）的階層化構造。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">結締組織包膜層級</div>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li><strong>肌外膜 (Epimysium)：</strong> 包覆整塊肌肉外圍的纖維組織，延伸連結至肌腱。</li>
+                <li><strong>肌束膜 (Perimysium)：</strong> 包覆肌肉纖維束（Fascicle，最多可達150條纖維）。</li>
+                <li><strong>肌內膜 (Endomysium)：</strong> 包覆在每一條單一肌肉纖維（肌細胞）外圍的精細組織。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">功能性收縮單位：肌小節 (Sarcomere)</div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 12px;"><strong>肌小節</strong>是肌肉收縮的基本最小單位，介於兩條 Z 線之間。</p>
+              <ul class="feature-list">
+                <li><strong>肌球蛋白 (Myosin - 粗絲)：</strong> 具備雙球狀頭部，含 ATPase 活性可與肌動蛋白結合。</li>
+                <li><strong>肌動蛋白 (Actin - 細絲)：</strong> 包含結合位點，靜止時被<em>橫肌球蛋白 (Tropomyosin)</em> 遮蔽。</li>
+                <li><strong>肌鈣蛋白 (Troponin)：</strong> 結合鈣離子（$Ca^{2+}$）後可移開橫肌球蛋白遮蔽。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: 肌絲滑行理論 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 骨骼肌肉系統</div>
+          <h2 class="slide-title">肌絲滑行理論 (Sliding Filament Theory)</h2>
+          <p class="slide-subtitle">肌肉力量產生與橫橋週期（Cross-Bridge Cycle）的 5 大階段。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">1</div>
+                <div class="card-title">靜止期 (Resting)</div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">肌漿中游離鈣離子極少。肌球蛋白頭部儲存能量，但無法與肌動蛋白結合。</p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">2</div>
+                <div class="card-title">激發-收縮偶聯期</div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">肌質網釋放 $Ca^{2+}$。鈣與肌鈣蛋白結合，拉開橫肌球蛋白，肌球蛋白頭與肌動蛋白結合。</p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">3</div>
+                <div class="card-title">收縮期 (Contraction)</div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">ATP 水解提供能量。肌球蛋白頭向肌小節中心拉動細絲（<strong>划槳動作 Power Stroke</strong>），釋放 ADP + $P_i$。</p>
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 16px;">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">4</div>
+                <div class="card-title">再充電期 (Recharge)</div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">新 ATP 結合至肌球蛋白頭，使其與肌動蛋白解離。若 $Ca^{2+}$ 與 ATP 足夠，頭部重新上膛並重複週期。</p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">5</div>
+                <div class="card-title">放鬆期 (Relaxation)</div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">運動神經刺激停止。$Ca^{2+}$ 被主動泵回肌質網。橫肌球蛋白再次遮蔽結合位點。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: 肌纖維類型比較 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 神經肌肉系統</div>
+          <h2 class="slide-title">肌纖維類型 (Type I / IIa / IIx) 特性對比</h2>
+          <p class="slide-subtitle">組織化學與功能特性差異比較表。</p>
+        </div>
+        <div class="slide-body">
+          <div class="table-container">
+            <table class="slide-table">
+              <thead>
+                <tr>
+                  <th>生理特性</th>
+                  <th>Type I（慢肌 / 氧化型）</th>
+                  <th>Type IIa（快肌 / 氧化-糖解型）</th>
+                  <th>Type IIx（快肌 / 純糖解型）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>馬達單元尺寸</strong></td>
+                  <td>小 (Small)</td>
+                  <td>大 (Large)</td>
+                  <td>極大 (Very Large)</td>
+                </tr>
+                <tr>
+                  <td><strong>收縮速度</strong></td>
+                  <td>慢 (Slow)</td>
+                  <td>快 (Fast)</td>
+                  <td>最快 (Fastest)</td>
+                </tr>
+                <tr>
+                  <td><strong>抗疲勞能力</strong></td>
+                  <td>高 (High)</td>
+                  <td>中等 (Moderate)</td>
+                  <td>低 / 極易疲勞 (Low)</td>
+                </tr>
+                <tr>
+                  <td><strong>力量輸出能力</strong></td>
+                  <td>低 (Low)</td>
+                  <td>中等 / 高 (Intermediate)</td>
+                  <td>極高 (Maximal)</td>
+                </tr>
+                <tr>
+                  <td><strong>線粒體密度</strong></td>
+                  <td>高 (High)</td>
+                  <td>中等 / 高</td>
+                  <td>低 (Low)</td>
+                </tr>
+                <tr>
+                  <td><strong>Myosin ATPase 活性</strong></td>
+                  <td>低</td>
+                  <td>高</td>
+                  <td>極高</td>
+                </tr>
+                <tr>
+                  <td><strong>主要能量系統</strong></td>
+                  <td>有氧系統（Aerobic）</td>
+                  <td>混合（Anaerobic/Aerobic）</td>
+                  <td>無氧系統（Phosphagen/Glycolytic）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: 本體感受器 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 神經肌肉系統</div>
+          <h2 class="slide-title">神經肌肉本體感受器 (Proprioceptors)</h2>
+          <p class="slide-subtitle">監測肌肉長度與張力變化的兩大關鍵感官受器。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon" style="color: var(--accent-cyan);">MS</div>
+                <div class="card-title">肌梭 (Muscle Spindles)</div>
+              </div>
+              <ul class="feature-list">
+                <li><strong>位置：</strong> 與紡錘內肌纖維（Intrafusal fibers）平行排列。</li>
+                <li><strong>刺激訊號：</strong> 監測肌肉的<strong>長度改變（Stretch）</strong>與伸展速率。</li>
+                <li><strong>反射反應：</strong> 觸發<strong>伸展反射（Stretch Reflex）</strong>，促使主動肌快速收縮。</li>
+                <li><strong>應用：</strong> 增強式訓練（Plyometrics）伸展-收縮循環（SSC）核心機制。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon" style="color: var(--accent-amber);">GTO</div>
+                <div class="card-title">高爾基腱器官 (Golgi Tendon Organs)</div>
+              </div>
+              <ul class="feature-list">
+                <li><strong>位置：</strong> 位於肌腱內，與紡錘外肌纖維呈串聯排列。</li>
+                <li><strong>刺激訊號：</strong> 監測肌肉產生的<strong>張力與拉力（Tension）</strong>。</li>
+                <li><strong>反射反應：</strong> 觸發<strong>自體抑制（Autogenic Inhibition）</strong>，放鬆主動肌以避免張力過高受傷。</li>
+                <li><strong>應用：</strong> 大重量阻力訓練的長期適應會降低 GTO 抑制作用，提升最大力量。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: 馬達單元徵召與控制 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 神經肌肉系統</div>
+          <h2 class="slide-title">馬達單元徵召與力量調節</h2>
+          <p class="slide-subtitle">神經系統調控力量輸出的三大基本法則。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">全或無定律與頻率編碼</div>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li><strong>全或無定律 (All-or-None Principle)：</strong> 當運動神經元發射動作電位，其支配的所有肌纖維都會同時進行完全收縮。單一馬達單元不存在「部分收縮」。</li>
+                <li><strong>頻率編碼 (Rate Coding)：</strong> 改變動作電位發射頻率（單一單收縮 $\rightarrow$ 總和 $\rightarrow$ 強直收縮 Tetanus）以精細控制力量大小。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">Henneman 尺寸原則 (Size Principle)</div>
+              <div class="highlight-box emerald">
+                馬達單元會依照需求力道，按尺寸<strong>從小（Type I）到大（Type IIx）順序徵召</strong>！
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 8px;">
+                高門檻的快肌 Type IIx 纖維，只有在大重量負荷（$>80\%$ 1RM）或高爆炸力、高速度動作時才會被有效徵召！
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: 心血管系統 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 心血管系統</div>
+          <h2 class="slide-title">心血管解剖與心臟傳導系統</h2>
+          <p class="slide-subtitle">心臟腔室構造、體循環與節律傳導路徑。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">心臟電氣傳導路徑</div>
+              <ol style="margin-left: 20px; color: var(--text-secondary); line-height: 1.8; font-size: 0.92rem;">
+                <li><strong>竇房結 (SA Node)：</strong> 右心房的自然節律器（約 60–100 bpm）。</li>
+                <li><strong>房室結 (AV Node)：</strong> 延遲電訊號傳遞，使心房完滿排血至心室。</li>
+                <li><strong>房室束 (Bundle of His)：</strong> 將電訊號傳導至心室中膈。</li>
+                <li><strong>浦金氏纖維 (Purkinje Fibers)：</strong> 快速將電訊號傳遍兩心室心肌發動收縮。</li>
+              </ol>
+            </div>
+            <div class="card">
+              <div class="card-title">心電圖 (ECG) 電波意義</div>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li><strong>P 波 (P-Wave)：</strong> 心房去極化（Atrial Depolarization）。</li>
+                <li><strong>QRS 複合波：</strong> 心室去極化（Ventricular Depolarization，心房再極化被掩蓋）。</li>
+                <li><strong>T 波 (T-Wave)：</strong> 心室再極化（Ventricular Repolarization）。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: 呼吸與血管系統 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 呼吸與血管系統</div>
+          <h2 class="slide-title">氣體運輸與呼吸通氣機制</h2>
+          <p class="slide-subtitle">血管網絡分流、肺部通氣與血紅素氧氣運輸。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">血管網絡分工</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>動脈與小動脈 (Arteries/Arterioles)：</strong> 高壓管路。小動脈經血管收縮/舒張控制各器官血流分配。</li>
+                <li><strong>微血管 (Capillaries)：</strong> 單層細胞厚度，進行 $O_2$、$CO_2$、營養素與廢物的物質交換。</li>
+                <li><strong>靜脈與小靜脈 (Veins/Venules)：</strong> 低壓回流管路，具備單向瓣膜防止血液倒流。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">肺部通氣與氣體交換</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>吸氣 (Inspiration)：</strong> 橫膈膜與外肋間肌收縮，胸腔擴張使胸內壓低於大氣壓。</li>
+                <li><strong>呼氣 (Expiration)：</strong> 安靜時為被動放鬆；劇烈運動時內肋間肌與腹肌主動收縮。</li>
+                <li><strong>血紅素 (Hemoglobin)：</strong> 紅血球內含鐵蛋白質，最多可結合 4 個氧分子。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: 運動急性適應 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 1 章 • 運動急性適應</div>
+          <h2 class="slide-title">心血管與呼吸系統的急性適應</h2>
+          <p class="slide-subtitle">有氧運動與重訓時的血流動力學差異。</p>
+        </div>
+        <div class="slide-body">
+          <div class="card">
+            <div class="card-title">心輸出量 ($Q$) 計算公式</div>
+            <div class="formula-box">
+              \[ Q = \text{心跳率 (HR)} \times \text{每搏輸出量 (SV)} \]
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 16px;">
+            <div class="card">
+              <div class="card-title">有氧耐力運動反應</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>收縮壓 (SBP)：</strong> 隨運動強度呈線性增加（高達 220 mmHg）。</li>
+                <li><strong>舒張壓 (DBP)：</strong> 基本維持不變或因周邊血管擴張而輕微下降。</li>
+                <li><strong>最大攝氧量 ($VO_2$ Max)：</strong> 隨強度提升，反應整體心肺適應。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">大重量阻力訓練反應</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>血壓暴增：</strong> 收縮壓與舒張壓同步急遽飆升（大重量深蹲時 SBP 可超過 300 mmHg）。</li>
+                <li><strong>瓦式動作 (Valsalva Effect)：</strong> 閉氣增加腹內壓與胸腔壓，進一步推升短期血壓。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: 骨骼肌肉與機械利得 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 阻力運動生物力學</div>
+          <h2 class="slide-title">肌肉附著與機械利得 (Mechanical Advantage)</h2>
+          <p class="slide-subtitle">肌肉起止點、力臂與人體槓桿力學原理。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">肌肉附著術語</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>起點 (Origin)：</strong> 近端（靠近身體中心）附著點，通常在運動中保持固定。</li>
+                <li><strong>止點 (Insertion)：</strong> 遠端（遠離身體中心）附著點，通常為主要移動端。</li>
+                <li><strong>肉質與腱質附著：</strong> 肌肉纖維直接附著於骨膜 vs 經由腱性組織附著。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">機械利得比值 ($MA$)</div>
+              <div class="formula-box">
+                \[ MA = \frac{d_m}{d_r} \]
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                其中 $d_m$ = 肌力臂長度，$d_r$ = 阻力臂長度。<br>
+                • <strong>$MA > 1.0$：</strong> 省力槓桿（所需的肌肉收縮力小於外在負重）。<br>
+                • <strong>$MA < 1.0$：</strong> 費力槓桿（需要較大肌力，但可獲得極高速度與動作範圍）。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: 槓桿系統 (互動組件) -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 阻力運動生物力學</div>
+          <h2 class="slide-title">一級、二級與三級槓桿系統</h2>
+          <p class="slide-subtitle">人體關節的三大生物力學槓桿配置與案例。</p>
+        </div>
+        <div class="slide-body">
+          <div class="lever-widget">
+            <div class="lever-controls">
+              <button class="lever-btn active" data-lever="1">一級槓桿 (First Class)</button>
+              <button class="lever-btn" data-lever="2">二級槓桿 (Second Class)</button>
+              <button class="lever-btn" data-lever="3">三級槓桿 (Third Class)</button>
+            </div>
+            <div class="lever-display">
+              <div class="lever-beam">
+                <div class="lever-fulcrum"></div>
+              </div>
+            </div>
+            <div id="lever-description" style="font-size: 0.95rem; color: var(--text-primary);">
+              <strong>一級槓桿：</strong> 支點（Fulcrum）部位於肌力（$F_m$）與阻力（$F_r$）之間。<br>
+              <em>解剖範例：</em> 三頭肌肘伸展、頸部伸展。<br>
+              <em>機械利得：</em> 可大於、等於或小於 1.0。
+            </div>
+            <div id="lever-ma" style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: 600;">
+              MA = 可變 (1.0)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: 解剖平面與關節動作 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 阻力運動生物力學</div>
+          <h2 class="slide-title">三維解剖平面與關節動作</h2>
+          <p class="slide-subtitle">運動訓練中的多平面動作分類與分析。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-cyan);">矢狀面 (Sagittal Plane)</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">將身體分為左右兩半。</p>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li>屈曲 (Flexion) / 伸展 (Extension)</li>
+                <li>跖屈 (Plantaflexion) / 背屈 (Dorsiflexion)</li>
+                <li><em>訓練動作：</em> 深蹲、二頭彎舉、跑步</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-emerald);">冠狀面 (Frontal Plane)</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">將身體分為前後兩半。</p>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li>外展 (Abduction) / 內收 (Adduction)</li>
+                <li>側屈 (Lateral Flexion)、足內翻/外翻</li>
+                <li><em>訓練動作：</em> 側平舉、開合跳</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-amber);">水平面 (Transverse Plane)</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">將身體分為上下兩半。</p>
+              <ul class="feature-list" style="margin-top: 12px;">
+                <li>內旋 (Internal) / 外旋 (External Rotation)</li>
+                <li>水平外展 / 水平內收</li>
+                <li><em>訓練動作：</em> 啞鈴飛鳥、藥球旋轉拋擲</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: 力、功、功率與轉矩 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 阻力運動生物力學</div>
+          <h2 class="slide-title">肌力、功率與轉矩力學</h2>
+          <p class="slide-subtitle">人體運動表現的物理學公式與觀念區分。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">物理學核心公式</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>力量 ($F$)：</strong> \( F = m \cdot a \) （單位：牛頓 N）。</li>
+                <li><strong>功 ($W$)：</strong> \( W = F \cdot d \) （單位：焦耳 J）。</li>
+                <li><strong>功率 ($P$)：</strong> \( P = \frac{W}{t} = F \cdot v \) （單位：瓦特 W）。</li>
+                <li><strong>轉矩 ($\tau$)：</strong> 旋轉力矩。\( \tau = F \cdot d_\perp \)。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">肌力 (Strength) 與 功率 (Power) 區分</div>
+              <div class="highlight-box amber">
+                <strong>肌力：</strong> 肌肉在指定速度下能產生的最大力量能力。<br>
+                <strong>功率：</strong> 單位時間內作功的速率。最大功率輸出通常發生在中等負荷（~30–80% 1RM）與中高速度時！
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: 影響肌力的生物力學因素 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 阻力運動生物力學</div>
+          <h2 class="slide-title">影響肌肉力量輸出的生物力學因素</h2>
+          <p class="slide-subtitle">解剖構造與生理特性對力量產生的決定性因素。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">神經與肌纖維結構因素</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>肌肉橫截面積 (CSA)：</strong> 肌力大小與肌肉生理橫截面積成正比，而非肌肉體積。</li>
+                <li><strong>羽狀角 (Pennation Angle)：</strong> 肌纖維與拉力線的夾角。羽狀角較大可容納更多並聯纖維，產生較大最大肌力！</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title">長度-張力與力量-速度關係</div>
+              <ul class="feature-list" style="margin-top: 8px;">
+                <li><strong>長度-張力關係：</strong> 肌肉在<em>安靜長度</em>時，肌動/肌球蛋白交疊最佳，可產生最大主動張力。</li>
+                <li><strong>力量-速度關係：</strong> 在向心收縮中，隨著肌肉收縮速度加快，所能產生的最大肌力隨之下降。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: 阻力來源分類 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 阻力運動生物力學</div>
+          <h2 class="slide-title">阻力運動中的外在阻力來源</h2>
+          <p class="slide-subtitle">不同器材與環境所提供的阻力物理特性。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-title">重力與自由重量</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">阻力永遠垂直向下。在動作範圍（ROM）中因關節力臂改變，致使轉矩需求動態變化。</p>
+            </div>
+            <div class="card">
+              <div class="card-title">慣性與摩擦力</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">慣性需額外力量進行加速與減速。摩擦阻力器材提供恆定摩擦力 ($F_f = \mu N$)。</p>
+            </div>
+            <div class="card">
+              <div class="card-title">流體阻力與彈性阻力</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">流體阻力（水阻/風阻）隨動作速度加快而劇增。彈性帶阻力隨拉伸距離成正比增加 ($F = kx$)。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: 關節生物力學與安全 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第 2 章 • 關節生物力學</div>
+          <h2 class="slide-title">關節生物力學與訓練傷害預防</h2>
+          <p class="slide-subtitle">腰椎、肩關節與膝關節在大重量訓練中的保護機制。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-title">腰椎安全防護</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">維持正常腰椎前凸。利用<strong>瓦式動作 (Valsalva Maneuver)</strong> 閉氣建立腹內壓（Fluid Ball），支撐脊椎減輕椎間盤壓力。</p>
+            </div>
+            <div class="card">
+              <div class="card-title">肩關節複合體</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">肩肱關節活動度高但穩定度低。需加強旋轉肌袖（SITS）肌肉平衡，避免夾擠症候群。</p>
+            </div>
+            <div class="card">
+              <div class="card-title">膝關節生物力學</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">髕骨可增加股四頭肌腱力臂。深蹲時應避免膝關節內翻（Knee Valgus），降低 ACL 損傷風險。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 19: NSCA-CSCS 歷屆模擬考題 (一) -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">高頻考點精選 • 模擬試題</div>
+          <h2 class="slide-title">NSCA-CSCS 模擬考題精選 (1/2)</h2>
+          <p class="slide-subtitle">檢驗對肌纖維類型與槓桿機械利得的理解。</p>
+        </div>
+        <div class="slide-body">
+          <div class="question-card">
+            <div class="question-text">Q1：下列哪一種肌纖維類型具備最高的 Myosin ATPase 活性與最快的收縮速度？</div>
+            <div class="options-list">
+              <div class="option-item">A) Type I</div>
+              <div class="option-item">B) Type IIa</div>
+              <div class="option-item">C) Type IIx</div>
+              <div class="option-item">D) Type IC</div>
+            </div>
+            <button class="reveal-btn">顯示答案與解析</button>
+            <div class="answer-box">
+              <strong>正確答案：C (Type IIx)</strong><br>
+              <em>解析：</em> Type IIx 肌纖維（純糖解型快肌）擁有最高的 Myosin ATPase 酵素活性，能提供最快的橫橋週期與爆發力輸出，但極易疲勞。
+            </div>
+          </div>
+
+          <div class="question-card">
+            <div class="question-text">Q2：人體四肢大多數肌肉骨骼關節系統運作時的機械利得 ($MA$) 通常為：</div>
+            <div class="options-list">
+              <div class="option-item">A) 大於 1.0</div>
+              <div class="option-item">B) 等於 1.0</div>
+              <div class="option-item">C) 小於 1.0</div>
+              <div class="option-item">D) 無限大</div>
+            </div>
+            <button class="reveal-btn">顯示答案與解析</button>
+            <div class="answer-box">
+              <strong>正確答案：C (小於 1.0)</strong><br>
+              <em>解析：</em> 四肢多數為三級槓桿 ($MA < 1.0$)，肌力臂短於阻力臂。雖然需要產生大於外在負重的肌肉收縮力，但能換取極高的末端肢體移動速度與廣闊動作範圍。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 20: NSCA-CSCS 歷屆模擬考題 (二) -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">高頻考點精選 • 模擬試題</div>
+          <h2 class="slide-title">NSCA-CSCS 模擬考題精選 (2/2)</h2>
+          <p class="slide-subtitle">檢驗對本體感受器與心電圖導極的理解。</p>
+        </div>
+        <div class="slide-body">
+          <div class="question-card">
+            <div class="question-text">Q3：進行大重量深蹲時，感應肌肉快速被拉長（Stretch）並誘發反射性收縮的感受器為：</div>
+            <div class="options-list">
+              <div class="option-item">A) 高爾基腱器官 (Golgi Tendon Organ)</div>
+              <div class="option-item">B) 肌梭 (Muscle Spindle)</div>
+              <div class="option-item">C) 帕西尼氏小體 (Pacinian Corpuscle)</div>
+              <div class="option-item">D) 肌質網 (Sarcoplasmic Reticulum)</div>
+            </div>
+            <button class="reveal-btn">顯示答案與解析</button>
+            <div class="answer-box">
+              <strong>正確答案：B (肌梭 Muscle Spindle)</strong><br>
+              <em>解析：</em> 肌梭專門監測肌肉長度變化與伸展速率，並透過伸展反射（Stretch Reflex）促使主動肌收縮。
+            </div>
+          </div>
+
+          <div class="question-card">
+            <div class="question-text">Q4：在標準心電圖 (ECG) 中，代表「心室去極化 (Ventricular Depolarization)」的波形為：</div>
+            <div class="options-list">
+              <div class="option-item">A) P 波</div>
+              <div class="option-item">B) QRS 複合波</div>
+              <div class="option-item">C) T 波</div>
+              <div class="option-item">D) U 波</div>
+            </div>
+            <button class="reveal-btn">顯示答案與解析</button>
+            <div class="answer-box">
+              <strong>正確答案：B (QRS 複合波)</strong><br>
+              <em>解析：</em> QRS 複合波代表心室去極化（心室收縮）。心房再極化同時發生但訊號被 QRS 複合波所掩蓋。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 21: 第一週總結卡片 -->
+      <section class="slide">
+        <div class="slide-header">
+          <div class="chapter-tag">第一週總結 • 考前必背</div>
+          <h2 class="slide-title">第一週 核心考點精華清單</h2>
+          <p class="slide-subtitle">進入第二週課程前，請確保已完全掌握以下核心觀念。</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-cyan);">第 1 章 核心重點</div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li>✔ 肌組織：肌外膜 $\rightarrow$ 肌束膜 $\rightarrow$ 肌內膜 $\rightarrow$ 肌小節。</li>
+                <li>✔ 肌絲滑行：$Ca^{2+}$ 結合肌鈣蛋白，露出肌動蛋白結合位。</li>
+                <li>✔ 纖維類型：Type I（慢/氧化）、Type IIa（混合）、Type IIx（快/糖解）。</li>
+                <li>✔ 受器功能：肌梭（長度/伸展反射）vs 腱器官（張力/自體抑制）。</li>
+                <li>✔ 心傳導：SA Node $\rightarrow$ AV Node $\rightarrow$ Bundle $\rightarrow$ Purkinje。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-title" style="color: var(--accent-emerald);">第 2 章 核心重點</div>
+              <ul class="feature-list" style="margin-top: 10px;">
+                <li>✔ 槓桿類型：一級（平衡/變數）、二級（省力 $MA>1$）、三級（費力/速度 $MA<1$）。</li>
+                <li>✔ 三大平面：矢狀面（屈伸）、冠狀面（外展內收）、水平面（旋轉）。</li>
+                <li>✔ 力學公式：轉矩 $\tau = F \cdot d_\perp$、功率 $P = W/t$。</li>
+                <li>✔ 肌力影響因素：CSA 橫截面積、羽狀角、長度-張力、力量-速度。</li>
+                <li>✔ 脊椎安全：維持腰椎自然前凸，利用瓦式動作（Valsalva）增加腹內壓。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="nav-controls">
+      <button class="btn-nav" id="btn-prev">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+        上一頁
+      </button>
+      <button class="btn-nav" id="btn-next">
+        下一頁
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"></path></svg>
+      </button>
+    </div>
+    <div class="slide-counter">
+      投影片 <span id="current-slide">1</span> / <span id="total-slides">21</span>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-overview">
+    <div class="modal-header">
+      <div class="modal-title">投影片總覽</div>
+      <button class="btn-icon" id="btn-close-modal">✕</button>
+    </div>
+    <div class="overview-grid" id="overview-grid"></div>
+  </div>
+
+  
+  <!-- 隨頁筆記抽屜 -->
+  <div class="note-drawer" id="note-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        📝 隨頁筆記本
+        <span class="slide-tag-badge" id="current-slide-badge">筆記</span>
+      </div>
+      <button class="btn-icon" id="btn-close-drawer">✕</button>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-drawer-action" id="btn-quick-clip">📌 一鍵引用重點</button>
+      <button class="btn-drawer-action" id="btn-master-notebook">📖 檢視所有筆記</button>
+    </div>
+    <textarea class="note-textarea" id="note-textarea" placeholder="在此記錄本張投影片的個人筆記與心得...（按 'N' 鍵可隨時開啟/關閉）"></textarea>
+    <div class="drawer-footer">
+      <div class="save-status">
+        <div class="save-dot"></div>
+        <span id="save-status-text">已自動儲存</span>
+      </div>
+      <span>按 'N' 鍵開關筆記</span>
+    </div>
+  </div>
+
+  <!-- 全域筆記總覽 Modal -->
+  <div class="modal-overlay" id="modal-notebook">
+    <div class="modal-header">
+      <div class="modal-title">📖 全域學習筆記本 (所有已存筆記)</div>
+      <button class="btn-icon" id="btn-close-notebook-modal">✕</button>
+    </div>
+    <div class="notebook-modal-body">
+      <div class="notebook-toolbar">
+        <input type="text" class="notebook-search" id="notebook-search" placeholder="搜尋所有已記錄的學習筆記與重點...">
+        <button class="btn-nav" id="btn-export-notes">匯出 MD 📝</button>
+        <button class="btn-nav" id="btn-export-json">匯出 JSON 💾</button>
+        <button class="btn-nav" id="btn-import-notes">匯入 JSON 📤</button>
+        <input type="file" id="file-import-notes" accept=".json" style="display: none;">
+      </div>
+      <div class="notebook-list" id="master-notebook-list"></div>
+    </div>
+  </div>
+  <!-- RAG AI 隨身助教抽屜 -->
+  <div class="ai-chat-drawer" id="ai-chat-drawer">
+    <div class="ai-chat-header">
+      <div class="ai-chat-title">
+        🤖 NSCA 隨身 AI 助教
+        <span class="ai-badge-pill" id="ai-slide-context-badge">已連結投影片</span>
+      </div>
+      <button class="btn-icon" id="btn-close-ai-drawer">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-bubble ai">
+        您好！我是您的 NSCA-CSCS 考照隨身 AI 助教。隨時向我提問關於本頁投影片或 1,876 頁原書課本的疑問！
+      </div>
+    </div>
+    <div class="quick-pills">
+      <button class="quick-pill-btn" data-prompt="請詳細解釋本頁投影片的核心觀念與考點">💡 解釋觀念</button>
+      <button class="quick-pill-btn" data-prompt="請出 2 題關於此主題的 CSCS 模擬考題與解析">🎯 考題出題</button>
+      <button class="quick-pill-btn" data-prompt="本主題在 CSCS 考試中最常考的高頻重點有哪些？">⭐ 必考重點</button>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chat-input" placeholder="向 AI 助教提問...（按 'A' 鍵開關）">
+      <button class="btn-send-chat" id="btn-send-chat">傳送</button>
+    </div>
+  </div>
+  <script src="slides.js"></script>
+</body>
+</html>

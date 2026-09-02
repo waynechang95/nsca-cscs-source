@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSCA-CSCS 證照總複習入口 | 11 週全套課程投影片</title>
+  <meta name="description" content="NSCA-CSCS 證照考試全套 11 週線上投影片總覽首頁，涵蓋《NSCA 5th Edition》全 26 章考點。">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      overflow-y: auto !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+    .portal-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 32px 24px 64px 24px;
+    }
+    .portal-hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .portal-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .portal-hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 24px auto;
+    }
+    .search-bar-container {
+      max-width: 600px;
+      margin: 0 auto 36px auto;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 20px 14px 48px;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+    }
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+    }
+    .week-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .week-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .week-badge {
+      display: inline-block;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .week-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .week-chapters {
+      font-size: 0.85rem;
+      color: var(--accent-emerald);
+      font-family: var(--font-mono);
+      margin-bottom: 12px;
+    }
+    .week-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .launchers {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-launch {
+      flex: 1;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: var(--text-primary);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-launch:hover {
+      background: var(--accent-cyan);
+      color: #0f172a;
+      border-color: var(--accent-cyan);
+    }
+    .btn-launch.zh:hover {
+      background: var(--accent-emerald);
+      color: #0f172a;
+      border-color: var(--accent-emerald);
+    }
+  </style>
+</head>
+<body class="portal-page">
+  <header style="position: sticky; top: 0;">
+    <div class="brand">
+      <div class="brand-badge">NSCA-CSCS</div>
+      <div class="presentation-title">總複習課程大綱選單</div>
+    </div>
+    <div class="header-controls">
+      <button class="btn-icon" id="btn-ai-chat" title="AI Assistant (Press 'A')">🤖</button>
+      <button class="btn-icon" id="btn-notes" title="Slide Notes (Press 'N')">📝</button>
+      <a href="index.html" class="btn-icon" style="width: auto; padding: 0 12px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan);">
+        EN / 繁體中文
+      </a>
+    </div>
+  </header>
+
+  <div class="portal-container">
+    <div class="portal-hero">
+      <div class="chapter-tag">NSCA 體能訓練精要 (5TH EDITION) 核心課程</div>
+      <h1>NSCA-CSCS 11 週全套複習簡報</h1>
+      <p>點擊下方各週大綱卡片，即可啟動對應單元的英文與繁體中文互動簡報投影片。</p>
+      <div class="search-bar-container">
+        <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        <input type="text" id="search-input" class="search-input" placeholder="搜尋章節、關鍵字 (例如：生物力學、能量系統、週期化、營養、測驗)...">
+      </div>
+    </div>
+
+    <div class="weeks-grid" id="weeks-grid">
+
+      <!-- WEEK 1 -->
+      <div class="week-card" data-keywords="解剖 生物力學 骨骼 肌小節 滑行理論 槓桿 轉矩">
+        <div>
+          <span class="week-badge">第 1 週</span>
+          <h2 class="week-title">運動解剖與生物力學</h2>
+          <div class="week-chapters">第 1 章 & 第 2 章</div>
+          <p class="week-desc">骨骼肌肉解剖、肌絲滑行理論、肌纖維類型（Type I/IIa/IIx）、感受器（肌梭/腱器官）、心傳導系統、人體槓桿（一二三級）、力臂與關節安全。</p>
+        </div>
+        <div class="launchers">
+          <a href="week1_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week1_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 2 -->
+      <div class="week-card" data-keywords="生理 能量系統 磷酸 原糖解 有氧 內分泌 睪固酮 游離皮質醇">
+        <div>
+          <span class="week-badge">第 2 週</span>
+          <h2 class="week-title">生理機制與能量系統訓練</h2>
+          <div class="week-chapters">第 3 章 & 第 4 章</div>
+          <p class="week-desc">磷酸原、糖解作用與有氧氧化系統；乳酸閾值與 EPOC 運動後過量氧耗；同化與異化內分泌機制（睾固酮、生長激素、IGF-1、皮質醇、兒茶酚胺）。</p>
+        </div>
+        <div class="launchers">
+          <a href="week2_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week2_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 3 -->
+      <div class="week-card" data-keywords="適應 無氧 有氧 肥大 骨密度 心輸出量 減訓">
+        <div>
+          <span class="week-badge">第 3 週</span>
+          <h2 class="week-title">抗阻與有氧訓練的適應性</h2>
+          <div class="week-chapters">第 5 章 & 第 6 章</div>
+          <p class="week-desc">神經肌肉適應、肌肉肥大、結締組織與骨密度增強、心血管與呼吸系統對有氧耐力的長期重構適應，以及減訊（Detraining）衰退時間表。</p>
+        </div>
+        <div class="launchers">
+          <a href="week3_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week3_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 4 -->
+      <div class="week-card" data-keywords="特殊族群 年齡 性別 青少年 老年 心理 喚醒 復健 前十字韌帶">
+        <div>
+          <span class="week-badge">第 4 週</span>
+          <h2 class="week-title">評估原則與特殊族群應用</h2>
+          <p class="week-desc">青少年、女性與年長者阻力訓練；理想表現狀態、喚醒與焦慮調控；運動傷害機制、組織癒合階段與復健重建進程。</p>
+        </div>
+        <div class="launchers">
+          <a href="week4_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week4_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 5 -->
+      <div class="week-card" data-keywords="營養 巨量營養素 蛋白質 碳水化合物 體能補給 補給品 禁藥 RED-S">
+        <div>
+          <span class="week-badge">第 5 週</span>
+          <h2 class="week-title">運動營養與補給策略</h2>
+          <p class="week-desc">日常飲食指南、三大巨量營養素需求、賽前/賽中/賽後能量補充、水分補充與體組成調整策略，以及合法與違禁提升表現物質。</p>
+        </div>
+        <div class="launchers">
+          <a href="week5_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week5_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 6 -->
+      <div class="week-card" data-keywords="測驗 體能 效度 信度 實施 順序 1RM 垂直跳 敏捷">
+        <div>
+          <span class="week-badge">第 6 週</span>
+          <h2 class="week-title">體能測驗與項目選擇</h2>
+          <div class="week-chapters">第 12 章 & 第 13 章</div>
+          <p class="week-desc">測驗選擇原則、建構效度與信度定義、標準化測驗實施步驟、體能測驗施測順序法則（疲勞控管）與數據統計評估。</p>
+        </div>
+        <div class="launchers">
+          <a href="week6_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week6_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 7 -->
+      <div class="week-card" data-keywords="熱身 柔軟度 PNF 伸展 舉重 動作技術 保護 保護員 非傳統">
+        <div>
+          <span class="week-badge">第 7 週</span>
+          <h2 class="week-title">抗阻與舉重技術實作</h2>
+          <div class="week-chapters">第 14 章, 第 15 章 & 第 16 章</div>
+          <p class="week-desc">RAMP 熱身流程、靜態/動態/PNF 伸展、自由重量與器械動作技術要領、保護員（Spotter）職責與非傳統器材（壺鈴、強人器材）技術。</p>
+        </div>
+        <div class="launchers">
+          <a href="week7_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week7_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 8 -->
+      <div class="week-card" data-keywords="訓練計畫 設計 阻力 有氧 負荷 次數 休息時間 心率 Karvonen">
+        <div>
+          <span class="week-badge">第 8 週</span>
+          <h2 class="week-title">訓練計畫設計（抗阻＋有氧）</h2>
+          <div class="week-chapters">第 17 章 & 第 20 章</div>
+          <p class="week-desc">阻力訓練計畫設計 7 大步驟（%1RM 重量與次數關係、組數、休息間隔）與有氧耐力訓練計畫開立（頻率、強度、Karvonen 目標心率計算）。</p>
+        </div>
+        <div class="launchers">
+          <a href="week8_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week8_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 9 -->
+      <div class="week-card" data-keywords="增強式 速度 敏捷 伸展收縮循環 SSC 觸地時間 加速 變向">
+        <div>
+          <span class="week-badge">第 9 週</span>
+          <h2 class="week-title">增強式與速度敏捷訓練</h2>
+          <div class="week-chapters">第 18 章 & 第 19 章</div>
+          <p class="week-desc">伸展-收縮循環（SSC）生理機制、增強式訓練安全與量化原則、衝刺跑步技術（加速段與最大速度段）以及變向敏捷（COD）訓練設計。</p>
+        </div>
+        <div class="launchers">
+          <a href="week9_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week9_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 10 -->
+      <div class="week-card" data-keywords="週期化 大週期 中週期 小週期 線性 波動 過度訓練 恢復">
+        <div>
+          <span class="week-badge">第 10 週</span>
+          <h2 class="week-title">週期化訓練策略與恢復</h2>
+          <div class="week-chapters">第 21 章 & 第 24 章</div>
+          <p class="week-desc">一般適應症候群（GAS）、週期化階層（大週期、中週期、小週期）、傳統線性與波動週期化模型比較、過度訓練評估診斷與恢復策略。</p>
+        </div>
+        <div class="launchers">
+          <a href="week10_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week10_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 11 -->
+      <div class="week-card" data-keywords="場館 管理 法律 設施 規劃 通道距離 責任 緊急應變">
+        <div>
+          <span class="week-badge">第 11 週</span>
+          <h2 class="week-title">場館管理與法律責任</h2>
+          <p class="week-desc">體能設施新設與維護步驟、器材排列間距規範（通道至少 36 吋、槓鈴平台安全距離）、緊急應變計畫、人員政策與法律免責責任。</p>
+        </div>
+        <div class="launchers">
+          <a href="week11_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week11_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const weekCards = document.querySelectorAll('.week-card');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        weekCards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          const keywords = card.dataset.keywords || '';
+          if (text.includes(query) || keywords.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSCA-CSCS Master Review Portal | 11-Week Course Series</title>
+  <meta name="description" content="Master Portal Dashboard for the complete 11-week NSCA-CSCS Exam Review Slide Series covering Chapters 1 to 26 of NSCA 5th Edition.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      overflow-y: auto !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+    .portal-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 32px 24px 64px 24px;
+    }
+    .portal-hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .portal-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .portal-hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 24px auto;
+    }
+    .search-bar-container {
+      max-width: 600px;
+      margin: 0 auto 36px auto;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 20px 14px 48px;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+    }
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+    }
+    .week-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .week-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .week-badge {
+      display: inline-block;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .week-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .week-chapters {
+      font-size: 0.85rem;
+      color: var(--accent-emerald);
+      font-family: var(--font-mono);
+      margin-bottom: 12px;
+    }
+    .week-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .launchers {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-launch {
+      flex: 1;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: var(--text-primary);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-launch:hover {
+      background: var(--accent-cyan);
+      color: #0f172a;
+      border-color: var(--accent-cyan);
+    }
+    .btn-launch.zh:hover {
+      background: var(--accent-emerald);
+      color: #0f172a;
+      border-color: var(--accent-emerald);
+    }
+  </style>
+</head>
+<body class="portal-page">
+  <header style="position: sticky; top: 0;">
+    <div class="brand">
+      <div class="brand-badge">NSCA-CSCS</div>
+      <div class="presentation-title">Master Review Portal</div>
+    </div>
+    <div class="header-controls">
+      <button class="btn-icon" id="btn-ai-chat" title="AI Assistant (Press 'A')">🤖</button>
+      <button class="btn-icon" id="btn-notes" title="Slide Notes (Press 'N')">📝</button>
+      <a href="index_zh.html" class="btn-icon" style="width: auto; padding: 0 12px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan);">
+        EN / 繁體中文
+      </a>
+    </div>
+  </header>
+
+  <div class="portal-container">
+    <div class="portal-hero">
+      <div class="chapter-tag">NSCA ESSENTIALS OF STRENGTH TRAINING & CONDITIONING (5TH ED)</div>
+      <h1>NSCA-CSCS 11-Week Master Review Series</h1>
+      <p>Interactive presentation slide decks covering all 26 chapters for the Certified Strength and Conditioning Specialist (CSCS) certification exam.</p>
+      <div class="search-bar-container">
+        <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        <input type="text" id="search-input" class="search-input" placeholder="Search chapters, topics, or keywords (e.g., Biomechanics, Energy Systems, Periodization)...">
+      </div>
+    </div>
+
+    <div class="weeks-grid" id="weeks-grid">
+
+      <!-- WEEK 1 -->
+      <div class="week-card" data-keywords="anatomy biomechanics musculoskeletal joint sliding filament lever torque">
+        <div>
+          <span class="week-badge">WEEK 1</span>
+          <h2 class="week-title">Exercise Anatomy & Biomechanics</h2>
+          <div class="week-chapters">Chapters 1 & 2</div>
+          <p class="week-desc">Musculoskeletal anatomy, sarcomere sliding filament theory, muscle fiber types (Type I, IIa, IIx), proprioceptors, cardiorespiratory flow, lever systems (1st, 2nd, 3rd class), moment arms & joint safety.</p>
+        </div>
+        <div class="launchers">
+          <a href="week1_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week1_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 2 -->
+      <div class="week-card" data-keywords="bioenergetics endocrine hormones atp pcr glycolysis oxidative lactate threshold testosterone cortisol growth hormone">
+        <div>
+          <span class="week-badge">WEEK 2</span>
+          <h2 class="week-title">Bioenergetics & Endocrine Responses</h2>
+          <div class="week-chapters">Chapters 3 & 4</div>
+          <p class="week-desc">Phosphagen, glycolytic, and oxidative energy systems; lactate threshold & EPOC; anabolic vs catabolic endocrine mechanisms (Testosterone, GH, IGF-1, Cortisol, Catecholamines).</p>
+        </div>
+        <div class="launchers">
+          <a href="week2_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week2_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 3 -->
+      <div class="week-card" data-keywords="adaptations anaerobic aerobic hypertrophy bone density vo2 max cardiac output detraining stretch shortening">
+        <div>
+          <span class="week-badge">WEEK 3</span>
+          <h2 class="week-title">Anaerobic & Aerobic Training Adaptations</h2>
+          <div class="week-chapters">Chapters 5 & 6</div>
+          <p class="week-desc">Neuromuscular adaptations, muscle hypertrophy, connective tissue & bone mineral density changes, cardiovascular/respiratory adaptations to aerobic endurance & detraining timelines.</p>
+        </div>
+        <div class="launchers">
+          <a href="week3_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week3_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 4 -->
+      <div class="week-card" data-keywords="special populations age sex youth older adults psychology arousal anxiety rehab tissue healing acl">
+        <div>
+          <span class="week-badge">WEEK 4</span>
+          <h2 class="week-title">Populations, Psychology & Rehabilitation</h2>
+          <div class="week-chapters">Chapters 7, 8, 9 & 23</div>
+          <p class="week-desc">Resistance training for youth, females, & older adults; ideal performance state, arousal & anxiety management; injury mechanisms, tissue healing phases & rehab protocols.</p>
+        </div>
+        <div class="launchers">
+          <a href="week4_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week4_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 5 -->
+      <div class="week-card" data-keywords="nutrition macronutrients protein carbohydrates fats performance fueling ergogenic aids supplements red-s">
+        <div>
+          <span class="week-badge">WEEK 5</span>
+          <h2 class="week-title">Sports Nutrition & Ergogenic Aids</h2>
+          <p class="week-desc">Dietary guidelines, macronutrient requirements, pre/during/post competition fueling, hydration, body composition strategies, and legal vs banned performance-enhancing substances.</p>
+        </div>
+        <div class="launchers">
+          <a href="week5_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week5_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 6 -->
+      <div class="week-card" data-keywords="testing evaluation validity reliability scoring sequencing 1rm vertical jump agility 300 yard shuttle">
+        <div>
+          <span class="week-badge">WEEK 6</span>
+          <h2 class="week-title">Athletic Testing & Evaluation</h2>
+          <div class="week-chapters">Chapters 13 & 14</div>
+          <p class="week-desc">Principles of test selection, construct/criterion validity, interrater reliability, standard test administration protocols, test sequencing rules, and statistical evaluation of performance data.</p>
+        </div>
+        <div class="launchers">
+          <a href="week6_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week6_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 7 -->
+      <div class="week-card" data-keywords="warmup flexibility pnf stretching exercise technique free weight machine spotting alternative implements">
+        <div>
+          <span class="week-badge">WEEK 7</span>
+          <h2 class="week-title">Warm-Up, Flexibility & Exercise Technique</h2>
+          <div class="week-chapters">Chapters 15, 16 & 17</div>
+          <p class="week-desc">RAMP warm-up protocol, static/dynamic/PNF stretching, major free weight & machine resistance execution, spotting rules, and nontraditional/alternative implement techniques.</p>
+        </div>
+        <div class="launchers">
+          <a href="week7_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week7_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 8 -->
+      <div class="week-card" data-keywords="program design resistance aerobic prescription volume 1rm load reps rest period target heart rate karvonen">
+        <div>
+          <span class="week-badge">WEEK 8</span>
+          <h2 class="week-title">Resistance & Aerobic Program Design</h2>
+          <div class="week-chapters">Chapters 18 & 21</div>
+          <p class="week-desc">The 7-step resistance training program design method (%1RM load-repetition relationships, volume, rest periods) and aerobic endurance prescription (frequency, intensity, Karvonen HRR, LSD/HIIT).</p>
+        </div>
+        <div class="launchers">
+          <a href="week8_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week8_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 9 -->
+      <div class="week-card" data-keywords="plyometrics speed agility stretch shortening cycle ssc ground contact time acceleration cod change of direction">
+        <div>
+          <span class="week-badge">WEEK 9</span>
+          <h2 class="week-title">Plyometrics, Speed & Agility Training</h2>
+          <div class="week-chapters">Chapters 19 & 20</div>
+          <p class="week-desc">Mechanics of the Stretch-Shortening Cycle (SSC), plyometric safety/volume guidelines, sprint mechanics (stride length vs frequency), and Change-of-Direction (COD) agility development.</p>
+        </div>
+        <div class="launchers">
+          <a href="week9_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week9_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 10 -->
+      <div class="week-card" data-keywords="periodization macrocycle mesocycle microcycle linear undulating overtraining overreaching recovery gas">
+        <div>
+          <span class="week-badge">WEEK 10</span>
+          <h2 class="week-title">Periodization & Recovery Strategies</h2>
+          <div class="week-chapters">Chapters 22 & 24</div>
+          <p class="week-desc">General Adaptation Syndrome (GAS), periodization cycles (Macro, Meso, Micro), linear vs undulating models, annual training plans, overtraining continuum diagnosis, and recovery modalities.</p>
+        </div>
+        <div class="launchers">
+          <a href="week10_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week10_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+      <!-- WEEK 11 -->
+      <div class="week-card" data-keywords="facility design layout legal policies risk management liability emergency response equipment spacing">
+        <div>
+          <span class="week-badge">WEEK 11</span>
+          <h2 class="week-title">Facility Design, Management & Legal Issues</h2>
+          <p class="week-desc">Facility planning phases, equipment spacing standards (walkways, rack perimeters), emergency action plans, staff policies, liability, standard of care, and legal responsibilities.</p>
+        </div>
+        <div class="launchers">
+          <a href="week11_en.html" class="btn-launch">English Slides 🚀</a>
+          <a href="week11_zh.html" class="btn-launch zh">中文投影片 🚀</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const weekCards = document.querySelectorAll('.week-card');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        weekCards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          const keywords = card.dataset.keywords || '';
+          if (text.includes(query) || keywords.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -6,12 +6,12 @@ import os
 import urllib.request
 from urllib.parse import urlparse
 
-PORT = 8000
+PORT = int(os.environ.get("PORT", 8000))
 INDEX_FILE = os.path.join(os.path.dirname(__file__), "nsca_5th_index.json")
 
 # NVIDIA API Configurations (from nvi_api.py)
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-NVIDIA_API_KEY = "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"
+NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "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")
 NVIDIA_MODEL = "openai/gpt-oss-120b"
 
 # Term translation map for Chinese queries
@@ -131,7 +131,6 @@ def call_nvidia_llm(query, context_text, citations, week=1, slide_num=1, slide_t
         with urllib.request.urlopen(req, timeout=25) as resp:
             res_data = json.loads(resp.read().decode("utf-8"))
             llm_reply = res_data["choices"][0]["message"]["content"]
-            # Clean reasoning text if present
             if "</think>" in llm_reply:
                 llm_reply = llm_reply.split("</think>")[-1].strip()
             return llm_reply
@@ -161,13 +160,11 @@ def generate_rag_answer(query, week=1, slide_title="", slide_num=1):
         })
         context_blocks += f"- [Chapter {r['chapter']}: {r['chapterTitle']} (p. {r['page']})]: {r['text'][:500]}\n\n"
 
-    # Attempt calling NVIDIA LLM API
     llm_answer = call_nvidia_llm(query, context_blocks, citations, week, slide_num, slide_title)
 
     if llm_answer:
         answer_text = llm_answer
     else:
-        # Fallback to friendly local text if API unavailable
         main_ref = citations[0]
         answer_text = (
             f"好的！根據 **NSCA Essentials (5th Ed)** 第 {main_ref['chapter']} 章 ({main_ref['chapterTitle']}) 第 {main_ref['page']} 頁的內容：\n\n"
@@ -184,8 +181,13 @@ def generate_rag_answer(query, week=1, slide_title="", slide_num=1):
 class RAGRequestHandler(http.server.BaseHTTPRequestHandler):
     def _send_cors_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, HEAD, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
+
+    def do_HEAD(self):
+        self.send_response(200)
+        self._send_cors_headers()
+        self.end_headers()
 
     def do_OPTIONS(self):
         self.send_response(200)
@@ -194,7 +196,7 @@ class RAGRequestHandler(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self):
         parsed = urlparse(self.path)
-        if parsed.path == "/api/status":
+        if parsed.path in ["/", "/api/status"]:
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self._send_cors_headers()
@@ -244,7 +246,7 @@ class RAGRequestHandler(http.server.BaseHTTPRequestHandler):
 def run_server():
     socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("", PORT), RAGRequestHandler) as httpd:
-        print(f"RAG Server with Conversational LLM running at http://localhost:{PORT}/")
+        print(f"RAG Server with Conversational LLM running on port {PORT}...")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

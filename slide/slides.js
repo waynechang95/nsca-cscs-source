@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic RAG API Server URL Switcher (Local vs Cloud Render)
   const RAG_SERVER_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:')
     ? 'http://localhost:8000/api/chat'
-    : 'https://nsca-rag-server.onrender.com/api/chat';
+    : 'https://nsca-cscs-source.onrender.com/api/chat';
 
   // Week Title Maps
   const weekTitles_en = {
